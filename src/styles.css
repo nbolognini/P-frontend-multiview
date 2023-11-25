@@ -1,0 +1,463 @@
+*{
+    margin:0;
+    padding:0;
+    text-decoration: none;
+}
+
+
+
+.container{
+    display:flex;
+    min-width: 860px;
+    max-width: 2000px;
+    min-height: 700px;
+    max-height: 900px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+main{
+    width: 100%;
+    padding: 20px;
+    background: #000;
+}
+
+.sidebar{
+    border-radius: 3px;
+    background: #4b0202;
+    background-image: url("./ui/img/fondo_sidebar.png");
+    color: #fff;
+    height: 100vh;
+    width: 200px;
+    transition: all 0.5s;
+    
+}
+
+.top_section{
+    display: flex;
+    align-items:center;
+    padding:20px 15px;
+}
+
+.logo{
+    font-size: 20px;
+    font-family: 'Times New Roman', sans-serif;
+}
+
+.bars{
+    display: flex;
+    font-size: 25px;
+    margin-left: 50px;
+}
+
+.link{
+    display: flex;
+    color: #fff;
+    padding: 10px 15px;
+    gap: 15px;
+    transition: all 0.5s;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.link:hover{
+    background:lightskyblue;
+    color: #000;
+    transition: all 0.5s;
+}
+
+.active{
+    background: lightskyblue;
+    color: #000;
+}
+
+.icon, .link_text{
+    font-size: 19px;
+    font-family: 'Times New Roman', sans-serif;
+    
+}
+
+
+
+
+.body {
+    background: lightskyblue;
+}
+
+body {
+    background-color: black;
+    
+}
+
+
+
+.box {
+    display: flex;
+    max-width: 0px;
+  }
+
+
+.body_black {
+    background: #000;
+    
+}
+
+
+
+
+
+
+
+.contenedor_senales {
+   /* Grid */
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 10px;
+
+
+
+}
+
+.contenedor_vacio_marco {
+    border: 1px solid #4B4B4B;
+    border-radius: 10px;
+    min-height: 200px;
+    max-height: 250px;
+    min-width: 270px;
+    font-weight: bold;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: 15%;
+    background-color: #000000;
+    margin: left;
+    background-image: url("./ui/img/canal26_logo.jpg");
+}
+
+.contenedor_canal26 {
+    border: 1px solid #4B4B4B;
+    border-radius: 10px;
+
+    
+    
+    min-height: 100px;
+    min-width: 270px;
+
+    max-width: 100px;
+    max-height: 250px;
+
+    display: grid;
+    
+
+    font-weight: bold;
+    padding: 5px;
+    position: relative;
+    overflow: hidden;
+    
+    background-image: url("./ui/img/canal26_logo.jpg");
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: 15%;
+    background-color: #000000;    
+}
+
+.contenedor_telemax {
+    border: 1px solid #4B4B4B;
+    border-radius: 10px;
+    min-height: 200px;
+    max-height: 250px;
+    min-width: 270px;
+    font-weight: bold;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+    background-image: url("./ui/img/telemax_logo.jpg");
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: 15%;
+    background-color: #000000;    
+}
+
+
+.contenedor_senal {
+    width: 200%;
+    position: center;
+    display: grid;
+    grid-template-columns: repeat(1, 4fr);
+    gap: 10px;
+    border-radius: 10px;
+    background: #000;
+}
+
+.contenedor_vacio {
+    
+    position: relative;
+    min-height: 200px;
+    max-height: 250px;
+    min-width: 270px;
+    font-weight: bold;
+    padding: 10px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center center;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.titulo_error {
+    color: red;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.contenedor_izquierda {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    
+
+}
+
+
+
+.titulo-video {
+    height: 36px;
+    width: 280px;
+    font-size: 19px;
+    color: greenyellow;
+}
+
+
+
+.title {
+    color: #FFFF;
+    font-size: 16px;
+    padding: 1px 1;
+}
+
+
+
+
+
+
+
+.body_contenedor {
+	max-width: 0px;
+    min-width: 860px;
+    max-width: 1550px;
+    min-height: 700px;
+    max-height: 900px;
+
+}
+
+
+.flex-Container{
+    display: flex;
+    min-width: 860px;
+    max-width: 2000px;
+    min-height: 700px;
+    max-height: 900px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: left;
+    align-content: top;
+    padding: 2px;
+    height: 100vh;
+    background-color: rgb(0,0,0)
+}
+
+
+
+
+.contenedor {
+    background: #0a0a0a;
+    width: 100%;
+    min-width: 2000px;
+	max-width: 2000px;
+
+	padding: 10px 10px;
+	/* Grid*/
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 10px;
+    border-radius: 10px;
+    
+}
+
+
+
+
+
+
+.Container-marco-negro {
+    background-color: rgba(0, 0, 0, 0);
+    height: 266px;
+    width: 298px;
+    margin: 2px;  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+
+}
+
+
+
+.Container-marco {
+    background-color: rgb(0, 0, 0);
+    height: 260px;
+    width: 292px;
+    margin: 2px;  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+    border: 1px solid #4B4B4B;
+}
+
+
+.Container-marco-gris {
+    background-color: rgba(172, 168, 168, 0.267);
+    height: 266px;
+    width: 298px;
+    margin: 2px;  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+
+}
+.Container-marco-canal26 {
+    background-image: url('./ui/img/logo_canal26.jpg'); /* Reemplaza con la ruta a tu imagen */
+    background-size: 50px 50px; /* Muestra la imagen en su tamaño original */
+    background-position: right top; /* Posiciona la imagen en la esquina superior derecha */
+    background-repeat: no-repeat; /* Evita que la imagen se repita OK */
+    background-color: rgb(0, 0, 0);
+    height: 260px;
+    width: 292px;
+    margin: 2px;  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+    border: 1px solid #4B4B4B;
+}
+
+
+.Container-titulo {
+    color: #FFFF;
+    height:10px;
+    width: 292px;
+    font-size: 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 5px;
+}
+
+.Container-video {
+    background-color: darkorange;
+    height: 250px;
+    width: 292px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #4B4B4B;
+}
+
+.Container-video-izquierda {
+    margin-left: 50px;
+}
+
+
+.texto-login {
+    font-size: 30px;
+    font-family: 'Times New Roman', sans-serif;
+    color: #fff;
+}
+
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh; /* Reduce la altura */
+    width: 450px; /* Reduce el ancho */
+    margin: auto; /* Centra el contenedor */
+    background-color: #1b1a1a; /* Cambia el color de fondo a oscuro */
+    color: #fff; /* Cambia el color del texto a blanco */
+    border-radius: 10px; /* Agrega bordes redondeados */
+}
+
+.login-container label {
+    font-size: 1.2em;
+    margin: 0.5em 0;
+}
+
+.login-container input {
+    width: 80%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    font-size: 1em;
+    color: #fff; /* Cambia el color del texto a blanco */
+    background-color: #555; /* Cambia el color de fondo a oscuro */
+    border: none; /* Elimina el borde */
+}
+
+.login-container button {
+    width: 80%;
+    padding: 0.5em;
+    font-size: 1em;
+    color: #070707; /* Cambia el color del texto a oscuro */
+    background-color: #fff; /* Cambia el color de fondo a blanco */
+    border: none;
+    cursor: pointer;
+}
+
+.login-container button:hover {
+    background-color: #ddd; /* Cambia el color de fondo al pasar el mouse */
+}
+
+.titulo-error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #ff0000; /* Color de texto rojo para el error */
+    font-size: 1px;
+}
+
