@@ -9,15 +9,15 @@ export const Canal26Page = () => {
 
 
    
-<div class="</div>">
-            <div class="Container-marco-gris">
-                  <div class="Container-marco-canal26">
-                                    <div class="Container-titulo">
+<div className="</div>">
+            <div className="Container-marco-gris">
+                  <div className="Container-marco-canal26">
+                                    <div className="Container-titulo">
                                       Canal26 <br></br>YouTube
                                     </div>
     
     
-                                    <div class="Container-video>">
+                                    <div className="Container-video>">
     
                                           <iframe      
                                                     height="180"
@@ -34,15 +34,15 @@ export const Canal26Page = () => {
           </div>
     
 
-          <div class="</div>">
-            <div class="Container-marco-gris">
-                  <div class="Container-marco-canal26">
-                                    <div class="Container-titulo">
+          <div className="</div>">
+            <div className="Container-marco-gris">
+                  <div className="Container-marco-canal26">
+                                    <div className="Container-titulo">
                                       Canal26 <br></br>HLS
                                     </div>
     
     
-                                    <div class="Container-video>">
+                                    <div className="Container-video>">
     
                                     <ReactPlayer controls muted playing width="264" height="198" url='https://stream-gtlc.telecentro.net.ar/hls/canal26hls/main.m3u8' />
     
@@ -55,15 +55,15 @@ export const Canal26Page = () => {
     
 
 
-        <div class="</div>">
-                <div class="Container-marco-gris">
-                        <div class="Container-marco-canal26">
-                                    <div class="Container-titulo">
+        <div className="</div>">
+                <div className="Container-marco-gris">
+                        <div className="Container-marco-canal26">
+                                    <div className="Container-titulo">
                                     Canal26 Fifa Tv <br></br> (OpterCast)
                                     </div>
     
     
-                                    <div class="Container-video>">
+                                    <div className="Container-video>">
     
                                     <ReactPlayer controls muted playing width="264" height="198" url='https://stream-gtlc.telecentro.net.ar/hls/fifatv/main.m3u8' />
     
@@ -74,10 +74,10 @@ export const Canal26Page = () => {
 
 
 
-          <div class="Container-marco-negro">
+          <div className="Container-marco-negro">
       </div>
 
-      <div class="Container-marco-negro">
+      <div className="Container-marco-negro">
       </div>
 
 

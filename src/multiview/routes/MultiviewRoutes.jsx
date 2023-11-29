@@ -28,7 +28,7 @@ export const MultiviewRoutes = () => {
 
                   <Sidebar >
 
-                      <div class="flex-Container">
+                      <div className="flex-Container">
 
                             <Routes>
                                   <Route path="home" element={<HomePage/>} />

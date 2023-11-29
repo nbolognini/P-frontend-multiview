@@ -66,11 +66,6 @@ export const LoginPage = () => {
     }
 
 
-
-
-
-
-
     {/*   RETORNO PRINCIPAL DE LA LOGINPAGE:   */}
     return (
         <>
@@ -101,16 +96,23 @@ export const LoginPage = () => {
                         <div className="login-container">
                                 <div className="texto-login"> MULTIVIEW <br /> <br />  </div>
 
+
+                                {/*   Para que con Enter clickee Login  */}
+                                <form onSubmit={LoginDB} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}> 
                                 {/*   Ingreso de Usuario   */}
                                 <label>Usuario</label> 
-                                <input type="text" value={username} onChange={e => setUsername(e.target.value)} /> 
+                                <input type="text" value={username} onChange={e => setUsername(e.target.value)} style={{ width: '300px' }} />
 
                                 {/*   Ingreso de Password   */}
                                 <label>Contraseña</label>
-                                <input type="password" value={password} onChange={e => setPassword(e.target.value)} />
+                                <input type="password" value={password} onChange={e => setPassword(e.target.value)} style={{ width: '300px' }} />
 
                                 {/*   Boton de login   */}
                                 <button className='btn btn-primary' onClick={LoginDB}> Ingresar </button>
+                                </form>
+
+
+
                         </div>
                 </div>
 

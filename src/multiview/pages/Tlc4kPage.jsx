@@ -5,14 +5,14 @@ export const Tlc4kPage = () => {
   return (
     <>
    
-   <div class="Container-marco-gris">
-          <div class="Container-marco">
-                                <div class="Container-titulo">
+   <div className="Container-marco-gris">
+          <div className="Container-marco">
+                                <div className="Container-titulo">
                                   Telecentro 4k <br></br>HLS
                                 </div>
 
 
-                                <div class="Container-video>">
+                                <div className="Container-video>">
 
                                 <ReactPlayer controls playing width="264" height="198" url='https://stream-gtlc.telecentro.net.ar/hls/telecentro4k/main.m3u8' />
 
@@ -20,15 +20,15 @@ export const Tlc4kPage = () => {
             </div>
       </div>
 
-      <div class="Container-marco-negro">
+      <div className="Container-marco-negro">
       </div>
 
 
-      <div class="Container-marco-negro">
+      <div className="Container-marco-negro">
       </div>
 
 
-      <div class="Container-marco-negro">
+      <div className="Container-marco-negro">
       </div>
 
 

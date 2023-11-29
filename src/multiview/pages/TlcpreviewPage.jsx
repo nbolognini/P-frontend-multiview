@@ -7,14 +7,14 @@ export const TlcpreviewPage = () => {
    
 
 
-      <div class="Container-marco-gris">
-          <div class="Container-marco">
-                                <div class="Container-titulo">
+      <div className="Container-marco-gris">
+          <div className="Container-marco">
+                                <div className="Container-titulo">
                                   TLC Preview <br></br>HLS
                                 </div>
 
 
-                                <div class="Container-video>">
+                                <div className="Container-video>">
 
                                 <ReactPlayer controls playing width="264" height="198" url='https://stream-gtlc.telecentro.net.ar/hls/telecentropreviewhls/main.m3u8' />
 
@@ -23,18 +23,18 @@ export const TlcpreviewPage = () => {
 
       </div>
 
-      <div class="Container-marco-negro">
+      <div className="Container-marco-negro">
       </div>
 
 
 
-      <div class="Container-marco-negro">
+      <div className="Container-marco-negro">
       </div>
 
    
    
 
-      <div class="Container-marco-negro">
+      <div className="Container-marco-negro">
       </div>
 
 
