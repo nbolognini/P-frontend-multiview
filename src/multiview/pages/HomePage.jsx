@@ -68,7 +68,22 @@ export const HomePage = () => {
                 </div>
         </div>
 
-
+        <div class="</div>">
+                <div class="Container-marco-gris">
+                        <div class="Container-marco-canal26">
+                                    <div class="Container-titulo">
+                                    Canal26 Fifa Tv <br></br> (OpterCast)
+                                    </div>
+    
+    
+                                    <div class="Container-video>">
+    
+                                    <ReactPlayer controls muted playing width="264" height="198" url='https://stream-gtlc.telecentro.net.ar/hls/fifatv/main.m3u8' />
+    
+                                      </div>
+                        </div>
+                </div>
+        </div>
 
 
 

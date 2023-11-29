@@ -4,12 +4,10 @@ import { AuthContext } from "../context/AuthContext";
 import { SidebarInvitado } from '../../ui';
 
 export const InvitadoPage = () => {
-
     const navigate = useNavigate();
     const onLoginLogin = () => {
       navigate('/login', { replace: true });
     }
-
 
     return (
         <div>
@@ -30,17 +28,34 @@ export const InvitadoPage = () => {
                     </ul>
                 </div>
             </nav>
-
-
             {/* Parte lateral izquierda, barra roja */}
             <div className="body_black">
-
                     <div className="body_contenedor">
                         <SidebarInvitado/>
                     </div>
-
             </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
         </div>
     )
 }

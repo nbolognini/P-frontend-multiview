@@ -7,7 +7,7 @@ export const LoginPage = () => {
     const navigate = useNavigate();
 
     const [username, setUsername] = useState('');
-    const [pass, setPass] = useState('');
+    const [password, setPassword] = useState('');
 
     const onLoginAnonimo = () => {
         navigate('/invitado', { replace: true });
@@ -22,16 +22,59 @@ export const LoginPage = () => {
         navigate('/loginerror', { replace: true });
     }
 
-    const handleLoginClick = () => {
-        if (username === 'sistemas26' && pass === 'sistemas26') {
-            onLogin();
-        } else {
-          onLoginOut();
-        }
-    };
 
+    {/*   Segunda funcion de logueo, compara con la base de datos   */}
+    const LoginDB = (e) => {
+        e.preventDefault();
+    
+        const onLogin = () => {
+            login(username);
+            navigate('/', { replace: true });
+        }
+    
+        const data = {
+            username : username,
+            password : password,
+        }
+    
+        fetch('http://localhost:3000/validate/', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(data)
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.text();
+        })
+        .then(data => {
+            if (data) {
+                const parsedData = JSON.parse(data);
+                onLogin();
+                return parsedData;
+            } else {
+                onLoginOut();
+            }
+        })
+        .then(result => {
+            console.log(result)
+        })
+        .catch(error => {
+            console.error(error);
+        })
+    }
+
+
+
+
+
+
+
+    {/*   RETORNO PRINCIPAL DE LA LOGINPAGE:   */}
     return (
         <>
+            {/*   PARTE DE ARRIBA DECORATIVA, y la opcion de entrar como onLoginANONIMO   */}
             <nav className="navbar navbar-expand-sm navbar-dark bg-dark p-2">
                 <h1 className="navbar-brand">Multiview 3.0</h1>
                 <div className="navbar-collapse">
@@ -47,29 +90,35 @@ export const LoginPage = () => {
                     </ul>
                 </div>
             </nav>
-            <div>
-                <hr />
-
-                <div className="login-container">
-                <div className="texto-login">
-                    MULTIVIEW <br /> <br /> 
-                </div>  
-    <label>Usuario</label> 
-    <input type="text" value={username} onChange={e => setUsername(e.target.value)} /> 
-    <label>Contraseña</label>
-    <input type="password" value={pass} onChange={e => setPass(e.target.value)} />
-    <button className='btn btn-primary' onClick={handleLoginClick}>
-        Ingresar
-    </button> 
-</div>
 
 
+
+
+
+                { /*   Recuadro de Login NUEVO  */}
+                <div>
+                        <hr />
+                        <div className="login-container">
+                                <div className="texto-login"> MULTIVIEW <br /> <br />  </div>
+
+                                {/*   Ingreso de Usuario   */}
+                                <label>Usuario</label> 
+                                <input type="text" value={username} onChange={e => setUsername(e.target.value)} /> 
+
+                                {/*   Ingreso de Password   */}
+                                <label>Contraseña</label>
+                                <input type="password" value={password} onChange={e => setPassword(e.target.value)} />
+
+                                {/*   Boton de login   */}
+                                <button className='btn btn-primary' onClick={LoginDB}> Ingresar </button>
+                        </div>
+                </div>
 
                 
 
 
 
-            </div>
+          
         </>
     )
 }
