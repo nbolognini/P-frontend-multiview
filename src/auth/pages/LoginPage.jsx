@@ -62,6 +62,9 @@ export const LoginPage = () => {
         })
         .catch(error => {
             console.error(error);
+            console.error("ERROR DE CONEXION CON LA BASE DE DATOS");
+            window.alert("ERROR DE CONEXION CON LA BASE DE DATOS")
+
         })
     }
 

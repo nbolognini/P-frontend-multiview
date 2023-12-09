@@ -375,6 +375,117 @@ gap: 10px;
     border: 1px solid #4B4B4B;
 }
 
+.Container-marco-telemax {
+    background-image: url('./ui/img/logo_telemax.jpg'); /* Reemplaza con la ruta a tu imagen */
+    background-size: 50px 50px; /* Muestra la imagen en su tamaño original */
+    background-position: right top; /* Posiciona la imagen en la esquina superior derecha */
+    background-repeat: no-repeat; /* Evita que la imagen se repita OK */
+    background-color: rgb(0, 0, 0);
+    height: 260px;
+    width: 292px;
+    margin: 2px;  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+    border: 1px solid #4B4B4B;
+}
+
+.Container-marco-musictop {
+    background-image: url('./ui/img/logo_musictop.jpg'); /* Reemplaza con la ruta a tu imagen */
+    background-size: 50px 50px; /* Muestra la imagen en su tamaño original */
+    background-position: right top; /* Posiciona la imagen en la esquina superior derecha */
+    background-repeat: no-repeat; /* Evita que la imagen se repita OK */
+    background-color: rgb(0, 0, 0);
+    height: 260px;
+    width: 292px;
+    margin: 2px;  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+    border: 1px solid #4B4B4B;
+}
+
+.Container-marco-tierramia {
+    background-image: url('./ui/img/logo_tierramia.jpg'); /* Reemplaza con la ruta a tu imagen */
+    background-size: 50px 50px; /* Muestra la imagen en su tamaño original */
+    background-position: right top; /* Posiciona la imagen en la esquina superior derecha */
+    background-repeat: no-repeat; /* Evita que la imagen se repita OK */
+    background-color: rgb(0, 0, 0);
+    height: 260px;
+    width: 292px;
+    margin: 2px;  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+    border: 1px solid #4B4B4B;
+}
+
+.Container-marco-latinatv {
+    background-image: url('./ui/img/logo_latinatv.jpg'); /* Reemplaza con la ruta a tu imagen */
+    background-size: 50px 50px; /* Muestra la imagen en su tamaño original */
+    background-position: right top; /* Posiciona la imagen en la esquina superior derecha */
+    background-repeat: no-repeat; /* Evita que la imagen se repita OK */
+    background-color: rgb(0, 0, 0);
+    height: 260px;
+    width: 292px;
+    margin: 2px;  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+    border: 1px solid #4B4B4B;
+}
+
+.Container-marco-radiolatina {
+    background-image: url('./ui/img/logo_radiolatina.jpg'); /* Reemplaza con la ruta a tu imagen */
+    background-size: 50px 50px; /* Muestra la imagen en su tamaño original */
+    background-position: right top; /* Posiciona la imagen en la esquina superior derecha */
+    background-repeat: no-repeat; /* Evita que la imagen se repita OK */
+    background-color: rgb(0, 0, 0);
+    height: 260px;
+    width: 292px;
+    margin: 2px;  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+    border: 1px solid #4B4B4B;
+}
+
+.Container-marco-tlcpreview {
+    background-image: url('./ui/img/logo_tlcpreview.jpg'); /* Reemplaza con la ruta a tu imagen */
+    background-size: 50px 50px; /* Muestra la imagen en su tamaño original */
+    background-position: right top; /* Posiciona la imagen en la esquina superior derecha */
+    background-repeat: no-repeat; /* Evita que la imagen se repita OK */
+    background-color: rgb(0, 0, 0);
+    height: 260px;
+    width: 292px;
+    margin: 2px;  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+    border: 1px solid #4B4B4B;
+}
+
+.Container-marco-4k {
+    background-image: url('./ui/img/logo_4k.jpg'); /* Reemplaza con la ruta a tu imagen */
+    background-size: 50px 50px; /* Muestra la imagen en su tamaño original */
+    background-position: right top; /* Posiciona la imagen en la esquina superior derecha */
+    background-repeat: no-repeat; /* Evita que la imagen se repita OK */
+    background-color: rgb(0, 0, 0);
+    height: 260px;
+    width: 292px;
+    margin: 2px;  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+    border: 1px solid #4B4B4B;
+}
 
 .Container-titulo {
     color: #FFFF;

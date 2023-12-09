@@ -6,7 +6,7 @@ export const Tlc4kPage = () => {
     <>
    
    <div className="Container-marco-gris">
-          <div className="Container-marco">
+          <div className="Container-marco-4k">
                                 <div className="Container-titulo">
                                   Telecentro 4k <br></br>HLS
                                 </div>

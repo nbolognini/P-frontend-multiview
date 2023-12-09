@@ -6,7 +6,7 @@ export const TelemaxPage = () => {
     <>
    
           <div className="Container-marco-gris">
-                  <div className="Container-marco">
+                  <div className="Container-marco-telemax">
                                     <div className="Container-titulo">
                                     Telemax <br></br> HLS
                                     </div>

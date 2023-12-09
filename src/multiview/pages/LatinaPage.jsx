@@ -6,7 +6,7 @@ export const LatinaPage = () => {
     <>
    
       <div className="Container-marco-gris">
-            <div className="Container-marco">
+            <div className="Container-marco-latinatv">
                                     <div className="Container-titulo">
                                     LatinaTV <br></br> HLS
                                     </div>
@@ -14,7 +14,7 @@ export const LatinaPage = () => {
     
                                     <div className="Container-video>">
     
-                                    <ReactPlayer controls muted playing width="264" height="198"   url='https://stream-gtlc.telecentro.net.ar/hls/latinatvhls/main.m3u8' />
+                                    <ReactPlayer controls playing width="264" height="198"   url='https://stream-gtlc.telecentro.net.ar/hls/latinatvhls/main.m3u8' />
     
                                       </div>
                 </div>
@@ -22,7 +22,7 @@ export const LatinaPage = () => {
 
 
         <div className="Container-marco-gris">
-                <div className="Container-marco">
+                <div className="Container-marco-radiolatina">
                                     <div className="Container-titulo">
                                     RadioLatina <br></br> HLS (Nebula)
                                     </div>
@@ -39,19 +39,8 @@ export const LatinaPage = () => {
         </div>
 
 
-
-
-
-
-
-
-       
-
-
-
-
         <div className="Container-marco-gris">
-                <div className="Container-marco">
+                <div className="Container-marco-radiolatina">
                                     <div className="Container-titulo">
                                     RadioLatina <br></br> (Baja Calidad)
                                     </div>
@@ -66,7 +55,7 @@ export const LatinaPage = () => {
         </div>
 
         <div className="Container-marco-gris">
-                <div className="Container-marco">
+                <div className="Container-marco-radiolatina">
                                     <div className="Container-titulo">
                                     RadioLatina <br></br> (Alta Calidad)
                                     </div>
@@ -83,7 +72,7 @@ export const LatinaPage = () => {
 
 
           <div className="Container-marco-gris">
-                <div className="Container-marco">
+                <div className="Container-marco-latinatv">
                                     <div className="Container-titulo">
                                     LatinaTV <br></br> (Twitch)
                                     </div>

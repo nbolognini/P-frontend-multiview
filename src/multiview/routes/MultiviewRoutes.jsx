@@ -22,8 +22,6 @@ export const MultiviewRoutes = () => {
     <>
         <Navbar/>
 
-
-
               <div className="body_contenedor">
 
                   <Sidebar >
@@ -49,8 +47,6 @@ export const MultiviewRoutes = () => {
                   </Sidebar>
 
               </div>
-
-
 
     </>
 

@@ -6,7 +6,7 @@ export const TierramiaPage = () => {
     <>
    
    <div className="Container-marco-gris">
-                  <div className="Container-marco">
+                  <div className="Container-marco-tierramia">
                                     <div className="Container-titulo">
                                     TierraMia <br></br> HLS
                                     </div>

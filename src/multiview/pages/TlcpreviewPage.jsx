@@ -8,7 +8,7 @@ export const TlcpreviewPage = () => {
 
 
       <div className="Container-marco-gris">
-          <div className="Container-marco">
+          <div className="Container-marco-tlcpreview">
                                 <div className="Container-titulo">
                                   TLC Preview <br></br>HLS
                                 </div>

@@ -7,7 +7,7 @@ export const MusictopPage = () => {
     <>
    
           <div className="Container-marco-gris">
-                  <div className="Container-marco">
+                  <div className="Container-marco-musictop">
                                     <div className="Container-titulo">
                                     MusicTop <br></br> HLS
                                     </div>
