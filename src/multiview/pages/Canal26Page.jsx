@@ -6,9 +6,6 @@ export const Canal26Page = () => {
   return (
     <>
 
-
-
-   
 <div className="</div>">
             <div className="Container-marco-gris">
                   <div className="Container-marco-canal26">
@@ -32,7 +29,6 @@ export const Canal26Page = () => {
                   </div>
               </div>
           </div>
-    
 
           <div className="</div>">
             <div className="Container-marco-gris">
@@ -49,11 +45,8 @@ export const Canal26Page = () => {
                                       </div>
                         </div>
                 </div>
-
-
         </div>
     
-
 
         <div className="</div>">
                 <div className="Container-marco-gris">
@@ -74,7 +67,7 @@ export const Canal26Page = () => {
 
 
 
-          <div className="Container-marco-negro">
+      <div className="Container-marco-negro">
       </div>
 
       <div className="Container-marco-negro">
