@@ -3,10 +3,13 @@ import React, { useEffect } from 'react';
 
 export const HomePage = () => {
 
+
+        
+
         useEffect(() => {
                 const interval = setInterval(() => {
                     window.location.reload();
-                }, 20000); // Recargo cada 20 segundos
+                }, 10000); // Recargo cada 10 segundos
         
                 return () => clearInterval(interval); // Limpiar el intervalo cuando el componente se desmonte
         }, []);
