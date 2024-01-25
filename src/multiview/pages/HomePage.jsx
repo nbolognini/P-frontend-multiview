@@ -9,7 +9,7 @@ export const HomePage = () => {
         useEffect(() => {
                 const interval = setInterval(() => {
                     window.location.reload();
-                }, 10000); // Recargo cada 10 segundos
+                }, 30000); // Recargo cada 30 segundos
         
                 return () => clearInterval(interval); // Limpiar el intervalo cuando el componente se desmonte
         }, []);

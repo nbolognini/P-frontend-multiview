@@ -44,7 +44,7 @@ export const LoginPage = () => {
         })
         .then(response => {
             if (!response.ok) {
-                throw new Error('Network response was not ok');
+                throw new Error('El servidor no responde');
             }
             return response.text();
         })
@@ -62,8 +62,12 @@ export const LoginPage = () => {
         })
         .catch(error => {
             console.error(error);
-            console.error("ERROR DE CONEXION CON LA BASE DE DATOS");
-            window.alert("ERROR DE CONEXION CON LA BASE DE DATOS")
+            if (error.message === 'net::ERR_CONNECTION_REFUSED') {
+                window.alert('ERROR DE CONEXION CON SERVER BACKEND');
+            }
+            console.error("NO SE HA PODIDO ESTABLECER CONEXION CON SERVER BACKEND");
+            window.alert("NO SE HA PODIDO ESTABLECER CONEXION CON SERVER BACKEND");
+            window.alert("NO SE HA PODIDO ESTABLECER CONEXION CON LA BASE DE DATOS")
 
         })
     }
@@ -91,8 +95,6 @@ export const LoginPage = () => {
 
 
 
-
-
                 { /*   Recuadro de Login NUEVO  */}
                 <div>
                         <hr />
@@ -114,14 +116,8 @@ export const LoginPage = () => {
                                 <button className='btn btn-primary' onClick={LoginDB}> Ingresar </button>
                                 </form>
 
-
-
                         </div>
                 </div>
-
-                
-
-
 
           
         </>
