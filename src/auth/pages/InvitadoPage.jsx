@@ -4,6 +4,7 @@ import { AuthContext } from "../context/AuthContext";
 import { SidebarInvitado } from '../../ui';
 
 export const InvitadoPage = () => {
+    
     const navigate = useNavigate();
     const onLoginLogin = () => {
       navigate('/login', { replace: true });

@@ -114,7 +114,15 @@ export const LoginPage = () => {
 
                                 {/*   Boton de login   */}
                                 <button className='btn btn-primary' onClick={LoginDB}> Ingresar </button>
+
+                                <hr />
+                                {/*   Boton de login  SISTEMAS PROVISORIO*/}
+                                <button className='btn btn-primary' onClick={onLogin}> Sistemas26 </button>
+
                                 </form>
+
+
+                               
 
                         </div>
                 </div>
