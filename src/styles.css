@@ -14,7 +14,17 @@
     max-height: 900px;
 }
 
-
+.Container-audio {
+    background-color: #000;
+    height: 30px;
+    width: 400px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #4B4B4B;
+    overflow: hidden;
+}
 
 
 
@@ -509,6 +519,8 @@ gap: 10px;
     border: 1px solid #4B4B4B;
 }
 
+
+
 .Container-video-izquierda {
     margin-left: 50px;
 }
@@ -571,4 +583,11 @@ gap: 10px;
     color: #ff0000; /* Color de texto rojo para el error */
     font-size: 1px;
 }
+
+
+
+
+
+
+
 
