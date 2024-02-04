@@ -3,20 +3,21 @@ import ReactPlayer from 'react-player'
 
 export const Canal26Page = () => {
 
+  const [tiempo] = useState(120000); // Seteado en 2 minutos (en milisegundos)
   const [video_01, setvideo_01] = useState('https://www.youtube.com/embed/live_stream?channel=UCrpMfcQNog595v5gAS-oUsQ&amp;autoplay=1&amp;mute=1&amp;enablejsapi=1');
   const [video_02, setvideo_02] = useState('https://stream-gtlc.telecentro.net.ar/hls/canal26hls/main.m3u8');
-
+  const [video_03, setvideo_03] = useState('https://stream-gtlc.telecentro.net.ar/hls/fifatv/main.m3u8');
+  
   useEffect(() => {
-    const timer = setInterval(() => {
-      // Recarga las fuentes de video
-      setvideo_01('https://www.youtube.com/embed/live_stream?channel=UCrpMfcQNog595v5gAS-oUsQ&amp;autoplay=1&amp;mute=1&amp;enablejsapi=1?rnd=' + Math.random());
-      setvideo_02('https://stream-gtlc.telecentro.net.ar/hls/canal26hls/main.m3u8?rnd=' + Math.random());
-    }, 10000); // Cada 10 segundos
-
-    return () => clearInterval(timer); // Limpia el intervalo si el componente se desmonta
+      const timer = setInterval(() => {
+          // Recarga las fuentes de video
+          setvideo_01(  video_01 + '?rnd=' + Math.random() );
+          setvideo_02(  video_02 + '?rnd=' + Math.random() );
+          setvideo_03(  video_03 + '?rnd=' + Math.random() );
+          }, [tiempo] );
+      return () => clearInterval(timer); // Limpio componente
   }, []);
-
-
+  
   return (
     <>
         <div className="</div>">
@@ -27,7 +28,7 @@ export const Canal26Page = () => {
                 YouTube 
               </div>
               <div className="Container-video>">
-                <iframe src={video_01}
+                <iframe src={'https://www.youtube.com/embed/live_stream?channel=UCrpMfcQNog595v5gAS-oUsQ&amp;autoplay=1&amp;mute=1&amp;enablejsapi=1'}
                   height="180"
                   width="290" 
                   frameBorder="0" 
@@ -47,9 +48,8 @@ export const Canal26Page = () => {
                 HLS
               </div>
               <div className="Container-video>">
-                <ReactPlayer url={video_02}
+                <ReactPlayer url={video_02} volume= {0.15}
                   controls 
-                  muted 
                   playing 
                   width="264" 
                   height="198" 
@@ -71,7 +71,7 @@ export const Canal26Page = () => {
                     playing 
                     width="264" 
                     height="198" 
-                    url={video_02} />
+                    url={video_03} />
                 </div>
               </div>
           </div>

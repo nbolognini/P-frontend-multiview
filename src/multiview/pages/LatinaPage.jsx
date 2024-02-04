@@ -14,7 +14,7 @@ export const LatinaPage = () => {
     
                                     <div className="Container-video>">
     
-                                    <ReactPlayer controls muted playing width="264" height="198"   url='https://stream-gtlc.telecentro.net.ar/hls/latinatvhls/main.m3u8' />
+                                    <ReactPlayer volume= {0.15} controls playing width="264" height="198"   url='https://stream-gtlc.telecentro.net.ar/hls/latinatvhls/main.m3u8' />
     
                                       </div>
                 </div>
@@ -30,7 +30,7 @@ export const LatinaPage = () => {
     
                                     <div className="Container-video>">
     
-                                    <ReactPlayer controls playing width="264" height="198"   url='https://stream-gtlc.telecentro.net.ar/hls/radiolatinahls/main.m3u8' />
+                                    <ReactPlayer controls muted playing width="264" height="198"   url='https://stream-gtlc.telecentro.net.ar/hls/radiolatinahls/main.m3u8' />
 
                                     
     

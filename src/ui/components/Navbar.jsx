@@ -39,15 +39,21 @@ export const Navbar = () => {
 
                     </Link>
 
+                    <button className="nav-item nav-link btn" onClick= { onLogout } >  
+
+                            Logout
+                    </button>
+
+
+
                         <div className="Container-audio">
-                            Radio_Latina:
-                            <ReactPlayer controls playing url='https://stream-gtlc.telecentro.net.ar/hls/radiolatinahls/main.m3u8' 
+                            Radio&nbsp;Latina:&nbsp;&nbsp;
+                            <ReactPlayer 
+                                controls playing url='https://stream-gtlc.telecentro.net.ar/hls/radiolatinahls/main.m3u8' 
                                 width='300px' 
-                                height='200%' 
-
-                        />
-
-
+                                height='200%'
+                                volume= {0.033} 
+                            />
                         </div>
 
 
