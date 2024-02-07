@@ -43,9 +43,6 @@ export const Navbar = () => {
 
                             Logout
                     </button>
-
-
-
                         <div className="Container-audio">
                             Radio&nbsp;Latina:&nbsp;&nbsp;
                             <ReactPlayer 
@@ -55,13 +52,9 @@ export const Navbar = () => {
                                 volume= {0.033} 
                             />
                         </div>
-
-
-
                 </div>
 
                 
-
                 <div className="navbar-collapse collapse w-100 order-3 dual-collapse2 d-flex justify-content-end">
                     <ul className="navbar-nav ml-auto">
 
