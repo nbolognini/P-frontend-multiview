@@ -13,10 +13,12 @@ export const LoginPage = () => {
         navigate('/invitado', { replace: true });
     }
 
-    const onLogin = () => {
-        login('sistemas26');
-        navigate('/', { replace: true });
-    }
+
+   // SOLO SI HAY QUE HACER UN LOGIN PROVISORIO
+   // const onLogin = () => {
+   //     login('sistemas26');
+   //     navigate('/', { replace: true });
+   //  }
 
     const onLoginOut = () => {
         navigate('/loginerror', { replace: true });
@@ -93,14 +95,11 @@ export const LoginPage = () => {
                 </div>
             </nav>
 
-
-
                 { /*   Recuadro de Login NUEVO  */}
                 <div>
                         <hr />
                         <div className="login-container">
                                 <div className="texto-login"> MULTIVIEW <br /> <br />  </div>
-
 
                                 {/*   Para que con Enter clickee Login  */}
                                 <form onSubmit={LoginDB} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}> 
@@ -115,14 +114,11 @@ export const LoginPage = () => {
                                 {/*   Boton de login   */}
                                 <button className='btn btn-primary' onClick={LoginDB}> Ingresar </button>
 
-                                <hr />
-                                {/*   Boton de login  SISTEMAS PROVISORIO*/}
-                                <button className='btn btn-primary' onClick={onLogin}> Sistemas26 </button>
+                                {/*  <hr />                                                                   */}
+                                {/*     Boton de login  SISTEMAS PROVISORIO                                   */}
+                                {/*  <button className='btn btn-primary' onClick={onLogin}> Sistemas26 </button> */}
 
                                 </form>
-
-
-                               
 
                         </div>
                 </div>

@@ -48,7 +48,7 @@ export const Canal26Page = () => {
                 HLS
               </div>
               <div className="Container-video>">
-                <ReactPlayer url={video_02} volume= {0.15}
+                <ReactPlayer url={video_02} volume= {0.5}
                   controls 
                   playing 
                   width="264" 

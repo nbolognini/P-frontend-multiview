@@ -98,7 +98,7 @@ export const HomePage = () => {
 
               <div className="</div>">
                 <div className="Container-marco-gris">
-                  <div className="Container-marco-canal26">
+                  <div className="Container-marco-telemax">
                     <div className="Container-titulo">       Telemax <br></br> HLS </div>
                       <div className="Container-video>">
                         <ReactPlayer
@@ -115,7 +115,7 @@ export const HomePage = () => {
 
               <div className="</div>">
                 <div className="Container-marco-gris">
-                  <div className="Container-marco-canal26">
+                  <div className="Container-marco-musictop">
                     <div className="Container-titulo">       MusicTop <br></br> HLS </div>
                       <div className="Container-video>">
                         <ReactPlayer
@@ -132,7 +132,7 @@ export const HomePage = () => {
 
               <div className="</div>">
                 <div className="Container-marco-gris">
-                  <div className="Container-marco-canal26">
+                  <div className="Container-marco-tierramia">
                     <div className="Container-titulo">       TierraMia <br></br> HLS </div>
                       <div className="Container-video>">
                         <ReactPlayer
@@ -149,7 +149,7 @@ export const HomePage = () => {
 
               <div className="</div>">
                 <div className="Container-marco-gris">
-                  <div className="Container-marco-canal26">
+                  <div className="Container-marco-latinatv">
                     <div className="Container-titulo">       LatinaTv <br></br> HLS </div>
                       <div className="Container-video>">
                         <ReactPlayer
@@ -166,7 +166,7 @@ export const HomePage = () => {
 
               <div className="</div>">
                 <div className="Container-marco-gris">
-                  <div className="Container-marco-canal26">
+                  <div className="Container-marco-tlcpreview">
                     <div className="Container-titulo">       Tlc-Preview <br></br> HLS </div>
                       <div className="Container-video>">
                         <ReactPlayer
@@ -183,7 +183,7 @@ export const HomePage = () => {
 
               <div className="</div>">
                 <div className="Container-marco-gris">
-                  <div className="Container-marco-canal26">
+                  <div className="Container-marco-4k">
                     <div className="Container-titulo">       Tlc-4K <br></br> HLS </div>
                       <div className="Container-video>">
                         <ReactPlayer
@@ -200,8 +200,8 @@ export const HomePage = () => {
 
               <div className="</div>">
                 <div className="Container-marco-gris">
-                  <div className="Container-marco-canal26">
-                    <div className="Container-titulo">       TEST <br></br> (Sistemas) </div>
+                  <div className="Container-marco">
+                    <div className="Container-titulo">       Sistemas  <br></br> TEST </div>
                       <div className="Container-video>">
                         <ReactPlayer
                           controls

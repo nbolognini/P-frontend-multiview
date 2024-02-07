@@ -44,12 +44,12 @@ export const Navbar = () => {
                             Logout
                     </button>
                         <div className="Container-audio">
-                            Radio&nbsp;Latina:&nbsp;&nbsp;
+                            Radio&nbsp;Latina&nbsp;&nbsp;
                             <ReactPlayer 
                                 controls playing url='https://stream-gtlc.telecentro.net.ar/hls/radiolatinahls/main.m3u8' 
                                 width='300px' 
                                 height='200%'
-                                volume= {0.033} 
+                                volume= {0.35} 
                             />
                         </div>
                 </div>

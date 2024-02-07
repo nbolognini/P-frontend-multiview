@@ -14,7 +14,7 @@ export const TelemaxPage = () => {
     
                                     <div className="Container-video>">
     
-                                    <ReactPlayer volume= {0.25} controls playing={true} width="264" height="198"   url='https://stream-gtlc.telecentro.net.ar/hls/telemaxhls/main.m3u8' />
+                                    <ReactPlayer volume= {0.5} controls playing={true} width="264" height="198"   url='https://stream-gtlc.telecentro.net.ar/hls/telemaxhls/main.m3u8' />
     
                                       </div>
                 </div>

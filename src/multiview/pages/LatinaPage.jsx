@@ -14,7 +14,7 @@ export const LatinaPage = () => {
     
                                     <div className="Container-video>">
     
-                                    <ReactPlayer volume= {0.15} controls playing width="264" height="198"   url='https://stream-gtlc.telecentro.net.ar/hls/latinatvhls/main.m3u8' />
+                                    <ReactPlayer volume= {0.5} controls playing width="264" height="198"   url='https://stream-gtlc.telecentro.net.ar/hls/latinatvhls/main.m3u8' />
     
                                       </div>
                 </div>
