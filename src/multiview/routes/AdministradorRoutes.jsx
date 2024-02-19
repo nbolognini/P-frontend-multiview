@@ -5,7 +5,7 @@ import { RoleContext } from "../../auth";
 import {  HomePage, AdministracionUsersPage } from "../../multiview/"
 
 
-//import { Navbar } from "../ui/components/Navbar"
+//import { Navbar } from "../ui/components/Navbar" OK
 
 export const AdministradorRoutes = () => {
     const { role } = useContext(RoleContext); // Obtener el rol del contexto
