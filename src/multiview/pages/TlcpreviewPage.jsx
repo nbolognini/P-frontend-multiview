@@ -25,11 +25,10 @@ export const TlcpreviewPage = () => {
 
                                 <div className="Container-video>"  >
                                   <ReactPlayer volume= {0.5} controls playing width="264" height="198" url='https://stream-gtlc.telecentro.net.ar/hls/telecentropreviewhls/main.m3u8' 
-                                  onBuffer={controladorBuffer}
-                                  onBufferEnd={cambiarColor} 
-                                  onError={cambiarColor} 
-                                  onPause={cambiarColor} 
-                                  
+                                              onBuffer={controladorBuffer}
+                                              onBufferEnd={cambiarColor} 
+                                              onError={cambiarColor} 
+                                              onPause={cambiarColor} 
                                   />
 
                                 </div>
