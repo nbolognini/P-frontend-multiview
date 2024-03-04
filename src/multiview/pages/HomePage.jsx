@@ -198,22 +198,11 @@ export const HomePage = () => {
                 </div>
               </div>
 
-              <div className="</div>">
-                <div className="Container-marco-gris">
-                  <div className="Container-marco">
-                    <div className="Container-titulo">       Sistemas  <br></br> TEST </div>
-                      <div className="Container-video>">
-                        <ReactPlayer
-                          controls
-                          muted
-                          playing 
-                          width="264" 
-                          height="198" 
-                          url={video_10} />
-                      </div>
-                    </div>
-                </div>
-              </div>
+              
+
+
+            <div className="Container-marco-negro">
+            </div>
             <div className="Container-marco-negro">
             </div>
             <div className="Container-marco-negro">

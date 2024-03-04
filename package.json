@@ -14,7 +14,8 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.11.0",
     "react-player": "^2.13.0",
-    "react-router-dom": "6"
+    "react-router-dom": "6",
+    "wavesurfer.js": "^7.7.3"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",

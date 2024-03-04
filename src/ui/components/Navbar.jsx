@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../auth/context/AuthContext';
 import ReactPlayer from 'react-player'
@@ -15,6 +15,23 @@ export const Navbar = () => {
             replace: true
         }); 
     }
+
+    const [isPlaying, setIsPlaying] = useState(true);
+    const handlePause = () => {
+        setIsPlaying(false);
+      };
+    const handlePlay = () => {
+        setIsPlaying(true);
+      };
+
+    const [isRed, setIsRed] = useState(false);
+
+    const cambiarColor = () => {
+        setIsRed(!isRed);
+    };
+    const controladorBuffer = () => {
+        setIsRed(isRed);
+    };
 
     return (
         <>
@@ -34,25 +51,46 @@ export const Navbar = () => {
 
                     </div>
 
-                    <Link className="navbar-brand" to="/latina">
+                    <>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </>
 
-
-                    </Link>
-
-                    <button className="nav-item nav-link btn" onClick= { onLogout } >  
-
+                    <button className="nav-item nav-link btn"  >  
                             Logout
                     </button>
-                        <div className="Container-audio">
-                            Radio&nbsp;Latina&nbsp;&nbsp;
+
+                        <div className="Container-audio" style={{ backgroundColor: isRed ? 'red' : 'transparent' }}>
+                            Radio&nbsp;Latina&nbsp;&nbsp;&nbsp;&nbsp;
                             <ReactPlayer 
                                 controls playing url='https://stream-gtlc.telecentro.net.ar/hls/radiolatinahls/main.m3u8' 
                                 width='300px' 
                                 height='200%'
-                                volume= {0.35} 
+                                volume= {0.15}
+                                onBuffer={() => { controladorBuffer (); handlePlay(); }}
+                                onBufferEnd={cambiarColor} 
+                                onError={() => { cambiarColor(); handlePause(); }}
+                                onPause={() => { cambiarColor(); handlePause(); }}
+                                onPlay={handlePlay}
+                                
                             />
                         </div>
                 </div>
+
+
+
+                <div className="navbar-nav">
+
+                {isPlaying && (
+                <div className="blinking">
+                    &nbsp;&nbsp;Reproduciendo
+                </div>
+                )}
+
+
+                    </div>
+
+
+
 
                 
                 <div className="navbar-collapse collapse w-100 order-3 dual-collapse2 d-flex justify-content-end">

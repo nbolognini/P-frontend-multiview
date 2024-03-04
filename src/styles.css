@@ -589,8 +589,20 @@ gap: 10px;
 
 
 
+@keyframes blinking {
+    0% { color: green; }
+    50% { color: transparent; }
+    100% { color: green; }
+  }
+  
+  .blinking {
+    animation: blinking 1s infinite;
+    background-color: transparent;
+    font-size: 0.8em; /* Ajusta este valor a tu gusto */
+  }
 
 
-
-
+  .transparent {
+    color: transparent;
+  }
 

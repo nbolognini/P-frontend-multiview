@@ -5,6 +5,8 @@ import { PublicRoute } from "./PublicRoute";
 import { LoginPage }      from "../auth/pages/LoginPage"
 import { LoginErrorPage } from "../auth/pages/LoginErrorPage"
 import { InvitadoPage }   from "../auth/pages/InvitadoPage";
+import { PrivateRoute2 } from "./PrivateRoute2";
+import { MultiviewRoutes2 } from "../multiview/routes/MultiviewRoutes2";
 
 export const AppRouter = () => {
   return (
@@ -33,11 +35,18 @@ export const AppRouter = () => {
               }   
             />
 
+            <Route path="/contenido" element={
+                <PrivateRoute2>
+                    <MultiviewRoutes2 />
+                </PrivateRoute2>
+              }   
+            />
+
+
             <Route path="/*" element={
               <PrivateRoute>
                 <MultiviewRoutes />
               </PrivateRoute>
-            
             } />
 
 

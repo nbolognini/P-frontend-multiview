@@ -1,6 +1,7 @@
 
 export * from './routes/MultiviewRoutes';
 export * from './pages/HomePage';
+export * from './pages/HomePage2';
 export * from './pages/Canal26Page';
 export * from './pages/LatinaPage';
 export * from './pages/TelemaxPage';

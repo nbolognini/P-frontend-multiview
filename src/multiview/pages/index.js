@@ -1,5 +1,6 @@
 
 export * from './HomePage';
+export * from './HomePage2';
 export * from './Canal26Page';
 export * from './LatinaPage';
 export * from './TelemaxPage';

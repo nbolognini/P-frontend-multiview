@@ -4,8 +4,8 @@ import { Navbar, Sidebar } from '../../ui';
 import { LoginPage }      from "../../auth/pages/LoginPage"
 
 
-import {  HomePage, 
-          HomePage2,
+import {  HomePage,
+          HomePage2, 
           Canal26Page, 
           LatinaPage, 
           TelemaxPage, 
@@ -13,12 +13,12 @@ import {  HomePage,
           TierramiaPage, 
           TlcpreviewPage, 
           Tlc4kPage,
-        } from "../../multiview/"
+        } from ".."
 
 
 //import { Navbar } from "../ui/components/Navbar"
 
-export const MultiviewRoutes = () => {
+export const MultiviewRoutes2 = () => {
   return (
     <>
         <Navbar/>
@@ -30,17 +30,14 @@ export const MultiviewRoutes = () => {
                       <div className="flex-Container">
 
                             <Routes>
-                                  <Route path="home" element={<HomePage/>} />
-                                  <Route path="canal26" element={<Canal26Page/>} />
-                                  <Route path="latina" element={<LatinaPage/>} />
-                                  <Route path="telemax" element={<TelemaxPage/>} />
+                                  <Route path="home" element={<HomePage2/>} />
                                   <Route path="musictop" element={<MusictopPage/>} />
                                   <Route path="tierramia" element={<TierramiaPage/>} />
                                   <Route path="tlcpreview" element={<TlcpreviewPage/>} />
                                   <Route path="tlc4k" element={<Tlc4kPage/>} />
                             
                                   <Route path="login" element={<LoginPage/>} />
-                                  <Route path="/" element={<Navigate to="/home" />} />
+                                  <Route path="/" element={<Navigate to="home" />} />
                             </Routes>
 
                         </div>

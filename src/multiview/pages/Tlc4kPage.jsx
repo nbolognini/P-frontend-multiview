@@ -1,11 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react';
 import ReactPlayer from 'react-player'
 
 export const Tlc4kPage = () => {
+
+  const [isRed, setIsRed] = useState(false);
+
+  const cambiarColor = () => {
+    setIsRed(!isRed);
+  };
+
+  const controladorBuffer = () => {
+    (!cambiarColor());
+  };
+
+
+
+
   return (
     <>
    
-   <div className="Container-marco-gris">
+   <div className="Container-marco-gris"  style={{ backgroundColor: isRed ? 'red' : 'transparent' }} >
           <div className="Container-marco-4k">
                                 <div className="Container-titulo">
                                   Telecentro 4k <br></br>HLS
@@ -14,7 +28,12 @@ export const Tlc4kPage = () => {
 
                                 <div className="Container-video>">
 
-                                <ReactPlayer volume= {0.5} controls playing width="264" height="198" url='https://stream-gtlc.telecentro.net.ar/hls/telecentro4k/main.m3u8' />
+                                <ReactPlayer  volume= {0.5} controls playing width="264" height="198" url='https://stream-gtlc.telecentro.net.ar/hls/telecentro4k/main.m3u8' 
+                                              onBuffer={controladorBuffer}
+                                              onBufferEnd={cambiarColor} 
+                                              onError={cambiarColor} 
+                                              onPause={cambiarColor} 
+                                />
 
                                   </div>
             </div>
