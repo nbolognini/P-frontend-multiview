@@ -30,9 +30,9 @@ export const Navbar = () => {
         setIsRed(!isRed);
     };
     const controladorBuffer = () => {
-        setIsRed(isRed);
-    };
-
+        (!cambiarColor());
+      };
+    
     return (
         <>
             <nav className="navbar navbar-expand-sm navbar-dark bg-dark p-2">
