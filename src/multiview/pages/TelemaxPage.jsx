@@ -14,6 +14,14 @@ export const TelemaxPage = () => {
     (!cambiarColor());
   };
 
+  const colorError = () => {
+    setIsRed(true);
+};
+
+const colorOk = () => {
+  setIsRed(false);
+};
+
   return (
     <>
    
@@ -27,10 +35,11 @@ export const TelemaxPage = () => {
                                     <div className="Container-video>">
     
                                     <ReactPlayer  volume= {0.5} controls playing={true} width="264" height="198"   url='https://stream-gtlc.telecentro.net.ar/hls/telemaxhls/main.m3u8' 
-                                                  onBuffer={controladorBuffer}
-                                                  onBufferEnd={cambiarColor} 
-                                                  onError={cambiarColor} 
-                                                  onPause={cambiarColor} 
+                                                  onBuffer={colorOk}
+                                                  // onBufferEnd={cambiarColor} 
+                                                  onError={colorError} 
+                                                  onPause={colorError}
+                                                  onPlay= {colorOk}
                                     />
     
                                       </div>

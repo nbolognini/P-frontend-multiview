@@ -23,6 +23,22 @@ export const LatinaPage = () => {
     (!cambiarColor2());
   };
 
+  const colorError = () => {
+    setIsRed(true);
+};
+
+const colorOk = () => {
+  setIsRed(false);
+};
+
+const colorOk2 = () => {
+  setIsRed2(false);
+};
+
+const colorError2 = () => {
+  setIsRed2(true);
+};
+
 
   return (
     <>
@@ -37,10 +53,11 @@ export const LatinaPage = () => {
                                     <div className="Container-video>">
     
                                     <ReactPlayer  volume= {0.5} controls playing width="264" height="198"   url='https://stream-gtlc.telecentro.net.ar/hls/latinatvhls/main.m3u8' 
-                                                  onBuffer={controladorBuffer}
-                                                  onBufferEnd={cambiarColor} 
-                                                  onError={cambiarColor} 
-                                                  onPause={cambiarColor} 
+                                                  onBuffer={colorOk}
+                                                  // onBufferEnd={cambiarColor} 
+                                                  onError={colorError} 
+                                                  onPause={colorError}
+                                                  onPlay= {colorOk}
                                     />
     
                                       </div>
@@ -58,10 +75,12 @@ export const LatinaPage = () => {
                                     <div className="Container-video>">
     
                                     <ReactPlayer  volume= {0.5} controls muted playing width="264" height="198"   url='https://stream-gtlc.telecentro.net.ar/hls/radiolatinahls/main.m3u8' 
-                                                  onBuffer={controladorBuffer2}
-                                                  onBufferEnd={cambiarColor2} 
-                                                  onError={cambiarColor2} 
-                                                  onPause={cambiarColor2} 
+                                                  //onBuffer={controladorBuffer2}
+                                                  //onBufferEnd={cambiarColor2} 
+                                                  onError={colorError2} 
+                                                  onPause={colorError2}
+                                                  onPlay= {colorOk2}
+                                                   
                                     />
 
                                     
