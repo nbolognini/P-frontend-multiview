@@ -2,6 +2,7 @@ import { useContext, useState } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../auth/context/AuthContext';
 import ReactPlayer from 'react-player'
+import { FaPlay } from "react-icons/fa";
 
 export const Navbar = () => {
 
@@ -60,12 +61,13 @@ export const Navbar = () => {
                     </button>
 
                         <div className="Container-audio" style={{ backgroundColor: isRed ? 'red' : 'transparent' }}>
-                            Radio&nbsp;Latina&nbsp;&nbsp;&nbsp;&nbsp;
+                            Radio&nbsp;Latina&nbsp;&nbsp;&nbsp;
                             <ReactPlayer 
-                                controls playing url='https://stream-gtlc.telecentro.net.ar/hls/radiolatinahls/main.m3u8' 
+                                controls  url='https://stream-gtlc.telecentro.net.ar/hls/radiolatinahls/main.m3u8' 
+                                playing='false'
                                 width='300px' 
                                 height='200%'
-                                volume= {0.15}
+                                volume= {0.20}
                                 onBuffer={() => { controladorBuffer (); handlePlay(); }}
                                 onBufferEnd={cambiarColor} 
                                 onError={() => { cambiarColor(); handlePause(); }}
@@ -82,7 +84,7 @@ export const Navbar = () => {
 
                 {isPlaying && (
                 <div className="blinking">
-                    &nbsp;&nbsp;Reproduciendo
+                    <FaPlay style={{ fontSize: '16px', margin: '0 5px' }}/>
                 </div>
                 )}
 
