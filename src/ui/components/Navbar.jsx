@@ -16,7 +16,7 @@ export const Navbar = () => {
     }
 
     //Coloca el icono de Play cuando reproduce, true es Play
-    const [isPlaying, setIsPlaying] = useState(true);
+    const [isPlaying, setIsPlaying] = useState(false);
     //Maneja los errores de reproduccion
     const [isError, setIsError] = useState(false);
 
@@ -82,15 +82,15 @@ export const Navbar = () => {
                             Radio&nbsp;Latina&nbsp;&nbsp;&nbsp;
                             <ReactPlayer 
                                 controls  url='https://stream-gtlc.telecentro.net.ar/hls/radiolatinahls/main.m3u8' 
-                                playing={false}
                                 width='300px' 
                                 height='200%'
                                 volume= {0.20}
-                                onBuffer=   {() => { controladorPlay () ; colorOk   (); }}
+                                onBuffer=   {() => { colorOk         (); }}
                                 //onBufferEnd={() => { controladorPause() ; colorError(); }}
                                 onPlay=     {() => { controladorPlay () ; colorOk   (); }}
                                 onPause=    {() => { controladorPause() ; colorError(); }}
                                 onError=    {() => { controladorPause() ; colorError(); }}
+                                playing={false}
                                 
                             />
                         </div>
