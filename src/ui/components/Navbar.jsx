@@ -82,7 +82,7 @@ export const Navbar = () => {
                             Radio&nbsp;Latina&nbsp;&nbsp;&nbsp;
                             <ReactPlayer 
                                 controls  url='https://stream-gtlc.telecentro.net.ar/hls/radiolatinahls/main.m3u8' 
-                                playing='false'
+                                playing={false}
                                 width='300px' 
                                 height='200%'
                                 volume= {0.20}
