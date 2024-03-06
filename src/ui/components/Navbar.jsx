@@ -5,11 +5,9 @@ import ReactPlayer from 'react-player'
 import { FaPlay } from "react-icons/fa";
 
 export const Navbar = () => {
-
+    //Maneja el estado del usuario, y la salida del mismo
     const { user, logout } = useContext ( AuthContext );
-
     const navigate = useNavigate();
-
     const onLogout = () => {
         logout();
         navigate('/login', {
@@ -17,15 +15,26 @@ export const Navbar = () => {
         }); 
     }
 
+    //Coloca el icono de Play cuando reproduce, true es Play
     const [isPlaying, setIsPlaying] = useState(true);
-    const handlePause = () => {
-        setIsPlaying(false);
-      };
-    const handlePlay = () => {
+    //Maneja los errores de reproduccion
+    const [isError, setIsError] = useState(false);
+
+    //Maneja el color del boton de Rojo de Error
+    const [isRed, setIsRed] = useState(false);
+
+
+    //componente que se ejecuta cuando se da play react-Player (cambia el estado de isPlaying a true, icono verde de play)
+    const controladorPlay = () => {
         setIsPlaying(true);
       };
 
-    const [isRed, setIsRed] = useState(false);
+    //componente que se ejecuta cuando se da pause react-Player (cambia el estado de isPlaying a false, icono verde de play desaprece)
+    const controladorPause = () => {
+        setIsPlaying(false);
+      };
+
+
 
     const cambiarColor = () => {
         setIsRed(!isRed);
@@ -33,6 +42,15 @@ export const Navbar = () => {
     const controladorBuffer = () => {
         (!cambiarColor());
       };
+
+
+    const colorError = () => {
+        setIsRed(true);
+    };
+
+    const colorOk = () => {
+        setIsRed(false);
+    };
     
     return (
         <>
@@ -68,11 +86,11 @@ export const Navbar = () => {
                                 width='300px' 
                                 height='200%'
                                 volume= {0.20}
-                                onBuffer={() => { controladorBuffer (); handlePlay(); }}
-                                onBufferEnd={cambiarColor} 
-                                onError={() => { cambiarColor(); handlePause(); }}
-                                onPause={() => { cambiarColor(); handlePause(); }}
-                                onPlay={handlePlay}
+                                onBuffer=   {() => { controladorPlay () ; colorOk   (); }}
+                                //onBufferEnd={() => { controladorPause() ; colorError(); }}
+                                onPlay=     {() => { controladorPlay () ; colorOk   (); }}
+                                onPause=    {() => { controladorPause() ; colorError(); }}
+                                onError=    {() => { controladorPause() ; colorError(); }}
                                 
                             />
                         </div>
