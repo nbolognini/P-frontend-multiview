@@ -1,8 +1,9 @@
-import { useContext, useState } from 'react';
+import { useContext, useState, useEffect } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../auth/context/AuthContext';
 import ReactPlayer from 'react-player'
 import { FaPlay } from "react-icons/fa";
+
 
 export const Navbar = () => {
     //Maneja el estado del usuario, y la salida del mismo
@@ -14,6 +15,10 @@ export const Navbar = () => {
             replace: true
         }); 
     }
+
+    //Para Iniciar en 5 segundos:
+    const [playing, setPlaying] = useState(false);
+
 
     //Coloca el icono de Play cuando reproduce, true es Play
     const [isPlaying, setIsPlaying] = useState(false);
@@ -51,6 +56,16 @@ export const Navbar = () => {
     const colorOk = () => {
         setIsRed(false);
     };
+
+    //Iniciar en 5 segundos:
+    useEffect(() => {
+        const timer = setTimeout(() => {
+          setPlaying(true);
+        }, 5000); // 5000 milisegundos son 5 segundos
+      
+        // Limpia el temporizador cuando el componente se desmonte
+        return () => clearTimeout(timer);
+      }, []);
     
     return (
         <>
@@ -84,13 +99,13 @@ export const Navbar = () => {
                                 controls  url='https://stream-gtlc.telecentro.net.ar/hls/radiolatinahls/main.m3u8' 
                                 width='300px' 
                                 height='200%'
-                                volume= {0.20}
+                                volume= {0.18}
                                 onBuffer=   {() => { colorOk         (); }}
                                 //onBufferEnd={() => { controladorPause() ; colorError(); }}
                                 onPlay=     {() => { controladorPlay () ; colorOk   (); }}
                                 onPause=    {() => { controladorPause() ; colorError(); }}
                                 onError=    {() => { controladorPause() ; colorError(); }}
-                                playing={false}
+                                playing={playing}
                                 
                             />
                         </div>
