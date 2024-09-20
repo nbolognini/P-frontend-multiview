@@ -96,7 +96,7 @@ export const Navbar = () => {
                         <div className="Container-audio" style={{ backgroundColor: isRed ? 'red' : 'transparent' }}>
                             Radio&nbsp;Latina&nbsp;&nbsp;&nbsp;
                             <ReactPlayer 
-                                controls  url='https://stream-gtlc.telecentro.net.ar/hls/radiolatinahls/main.m3u8' 
+                                controls  url='https://stream-gtlc.telecentro.net.ar/live/Repetidoras' 
                                 width='300px' 
                                 height='200%'
                                 volume= {0.18}

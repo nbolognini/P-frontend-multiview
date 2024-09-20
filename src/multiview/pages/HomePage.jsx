@@ -3,9 +3,9 @@ import ReactPlayer from 'react-player'
 
 export const HomePage = () => {
 
-        //SETEO DE TIEMPO DE REFRESCO y DE FUENTES
-        const [tiempo] = useState(120000); // Seteado en 2 minutos (en milisegundos)
-        const [video_01, setvideo_01] = useState('https://www.youtube.com/embed/live_stream?channel=UCrpMfcQNog595v5gAS-oUsQ&amp;autoplay=1&amp;mute=1&amp;enablejsapi=1');
+        //SETEO DE TIEMPO DE REFRESCO y DE FUENTES  ( le saue un 0, hay que agregarlop)
+        const [tiempo] = useState(12000); // Seteado en 2 minutos (en milisegundos)
+        const [video_01, setvideo_01] = useState('https://www.youtube.com/embed/MS0QdZ5zvn8?si=mpnwJeJU46ygQEKp&amp;autoplay=1&amp;mute=1&amp;enablejsapi=1');
         const [video_02, setvideo_02] = useState('https://stream-gtlc.telecentro.net.ar/hls/canal26hls/main.m3u8');
         const [video_03, setvideo_03] = useState('https://stream-gtlc.telecentro.net.ar/hls/fifatv/main.m3u8');
         const [video_04, setvideo_04] = useState('https://stream-gtlc.telecentro.net.ar/hls/telemaxhls/main.m3u8');
@@ -34,7 +34,6 @@ export const HomePage = () => {
             return () => clearInterval(timer); // Limpio componente
         }, []);
 
-          
         //ESTRUCTURA DE LA PAGINA
         return (
           <>
@@ -46,7 +45,7 @@ export const HomePage = () => {
                       YouTube 
                     </div>
                     <div className="Container-video>"> 
-                      <iframe src={'https://www.youtube.com/embed/live_stream?channel=UCrpMfcQNog595v5gAS-oUsQ&amp;autoplay=1&amp;mute=1&amp;enablejsapi=1'}
+                      <iframe src={video_01}
                         height="180"
                         width="290" 
                         frameBorder="0" 
@@ -78,7 +77,6 @@ export const HomePage = () => {
                 </div>
               </div>
           
-      
               <div className="</div>">
                 <div className="Container-marco-gris">
                   <div className="Container-marco-canal26">
@@ -197,9 +195,6 @@ export const HomePage = () => {
                     </div>
                 </div>
               </div>
-
-              
-
 
             <div className="Container-marco-negro">
             </div>
