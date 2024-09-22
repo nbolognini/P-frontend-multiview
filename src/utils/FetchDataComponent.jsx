@@ -13,7 +13,7 @@ const FetchDataComponent = () => {
             });
     }, []);
 
-    return <div>Data fetched and stored in localStorage</div>;
+    return;
 };
 
 export default FetchDataComponent;

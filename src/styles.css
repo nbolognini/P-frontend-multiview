@@ -133,9 +133,10 @@ body {
 
 .contenedor_senales {
    /* Grid */
-display: grid;
-grid-template-columns: repeat(4, 1fr);
-gap: 10px;
+   display: grid;
+   grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+   gap: 20px; /* Espacio entre los elementos */
+   justify-items: center; /* Centrar los elementos horizontalmente */
 
 
 
@@ -404,6 +405,8 @@ gap: 10px;
     border: 1px solid #4B4B4B;
 }
 
+
+
 .Container-marco-musictop {
     background-image: url('./ui/img/logo_musictop.jpg'); /* Reemplaza con la ruta a tu imagen */
     background-size: 50px 50px; /* Muestra la imagen en su tamaño original */
@@ -512,7 +515,7 @@ gap: 10px;
 }
 
 .Container-video {
-    background-color: darkorange;
+
     height: 250px;
     width: 292px;
     padding: 10px;
@@ -521,6 +524,7 @@ gap: 10px;
     justify-content: center;
     border: 1px solid #4B4B4B;
 }
+
 
 
 
@@ -606,3 +610,96 @@ gap: 10px;
     color: transparent;
   }
 
+
+
+  
+
+
+
+
+
+  .contenedor_senales2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); /* Ajustar automáticamente el número de columnas */
+    gap: 20px; /* Espacio entre los elementos */
+    justify-items: center; /* Centrar los elementos horizontalmente */
+}
+
+.Container-marco-gris2 {
+    background-color: rgba(172, 168, 168, 0.267);
+    height: auto;
+    width: 100%;
+    max-width: 298px;
+    margin: 2px;  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+.Container-marco-telemax2 {
+    background-image: url('./ui/img/logo_telemax.jpg'); /* Reemplaza con la ruta a tu imagen */
+    background-size: 50px 50px; /* Muestra la imagen en su tamaño original */
+    background-position: right top; /* Posiciona la imagen en la esquina superior derecha */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-color: rgb(0, 0, 0);
+    height: auto;
+    width: 100%;
+    max-width: 292px;
+    margin: 2px;  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+    border: 1px solid #4B4B4B;
+}
+
+.Container-titulo2 {
+    color: #FFFF;
+    height: auto;
+    width: 100%;
+    font-size: 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 5px;
+}
+
+.Container-video2 {
+    background-color: rgb(5, 5, 5);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0px solid #f10808;
+    height: auto;
+    width: 100%;
+}
+
+.player {
+    width: 100%;
+    height: 100%;
+}
+
+/* Media queries para ajustar el diseño en diferentes tamaños de pantalla */
+@media (min-width: 1920px) {
+    .contenedor_senales2 {
+        grid-template-columns: repeat(4, 1fr); /* Cuatro columnas para pantallas grandes */
+    }
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .contenedor_senales2 {
+        grid-template-columns: repeat(3, 1fr); /* Tres columnas para pantallas medianas */
+    }
+}
+
+@media (max-width: 1279px) {
+    .contenedor_senales2 {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajustar el número de columnas para pantallas más pequeñas */
+    }
+
+    .Container-marco-gris2, .Container-marco-telemax2 {
+        max-width: 100%; /* Asegurarse de que los contenedores no excedan el ancho de la pantalla */
+    }
+}

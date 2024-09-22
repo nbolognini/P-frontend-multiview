@@ -1,0 +1,35 @@
+/* src/utils/DisplayDataComponent.css */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+    gap: 20px; /* Espacio entre los elementos */
+    justify-items: center; /* Centrar los elementos horizontalmente */
+}
+
+.player-wrapper {
+    width: 200%;
+    position: center;
+    display: grid;
+    grid-template-columns: repeat(1, 4fr);
+    gap: 10px;
+    border-radius: 10px;
+    background: #000;
+}
+
+.player {
+    width: 100%;
+    height: 100%;
+}
+
+.signal-item {
+    list-style: none; /* Eliminar los puntos de la lista */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signal-text {
+    color: white; /* Cambiar el color del texto a blanco */
+    margin-bottom: 10px; /* Añadir margen inferior para separar el texto del video */
+    text-align: center; /* Centrar el texto */
+}
