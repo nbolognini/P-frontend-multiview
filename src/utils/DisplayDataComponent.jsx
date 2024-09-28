@@ -5,6 +5,18 @@ import './DisplayDataComponent.css'; // Importar el archivo CSS
 
 const DisplayDataComponent = () => {
     const signals = getItem('signals');
+    const logos = getItem('logos');
+
+    // console.log( "HOLA");
+    // logos.map((logo) => {
+    //     try {
+    //         console.log(logo.channel_id);
+    //         return require(`../ui/img/logo_${logo.channel_id}.jpg`);
+    //     } catch (error) {
+    //         console.error('Error importing logo:', error);
+    //         return logo_error;
+    //     }
+    // });
 
     return (
         <div>

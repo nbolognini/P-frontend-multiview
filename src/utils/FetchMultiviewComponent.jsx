@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
 import { getItem, setItem } from './localStorage';
 
-const FetchDataComponent = () => {
+const FetchMultiviewComponent = () => {
     useEffect(() => {
         const user = getItem('user'); // Obtener el valor de 'user' desde localStorage
         const data = { user_name_id: user.name }; // Crear el objeto a enviar
 
         //limpio data de ls
-        //localStorage.removeItem('signals');
+        localStorage.removeItem('signals');
         fetch('http://localhost:3000/getChannelAndSignal', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -25,4 +25,4 @@ const FetchDataComponent = () => {
     return null; // Puedes retornar null o algún JSX si es necesario
 };
 
-export default FetchDataComponent;
+export default FetchMultiviewComponent;
