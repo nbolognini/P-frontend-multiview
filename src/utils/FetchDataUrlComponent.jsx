@@ -6,7 +6,7 @@ const FetchDataUrlComponent = () => {
         const data = { user_name_id: 'nbolognini' }; // Define los datos que necesitas enviar en el cuerpo de la solicitud
                                             // Se pone clave y valor, en este caso se pone user y nbolognini
 
-        fetch('http://localhost:3000/getChannelAndSignal', {
+        fetch(`${import.meta.env.VITE_API_BASE_URL}/getChannelAndSignal`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify("data")

@@ -8,7 +8,7 @@ const FetchDataComponent = () => {
 
         //limpio data de ls
         //localStorage.removeItem('signals');
-        fetch('http://localhost:3000/getChannelAndSignal', {
+        fetch(`${import.meta.env.VITE_API_BASE_URL}/getChannelAndSignal`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data) // Convertir la variable data a JSON

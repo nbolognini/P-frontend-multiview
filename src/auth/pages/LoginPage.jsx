@@ -39,7 +39,7 @@ export const LoginPage = () => {
             password : password,
         }
         // ORIGINAL PARA QUE FUNCIONE EN PRODUCION: fetch('https://multiview.telecentro.net.ar:3000/validate/', {
-        fetch('http://localhost:3000/validate/', {
+        fetch(`${import.meta.env.VITE_API_BASE_URL}/validate/`, {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(data)

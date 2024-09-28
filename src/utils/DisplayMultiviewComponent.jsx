@@ -20,7 +20,7 @@ const DisplayMultiviewComponent = () => {
             for (const signal of signals) {
                 const imageName = `${'logo_' + signal.channel_id.toLowerCase()}.jpg`;
                 try {
-                    const response = await fetch('http://localhost:3000/imageLogo', {
+                    const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/imageLogo`, {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
