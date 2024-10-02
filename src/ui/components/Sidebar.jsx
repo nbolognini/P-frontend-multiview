@@ -6,6 +6,8 @@ import { TbSquareLetterP } from "react-icons/tb";
 import { SiYoutubemusic } from "react-icons/si";
 import { FaRadio } from "react-icons/fa6";
 import { FaTh, FaBars, FaTv }from "react-icons/fa";
+import { FaSolarPanel } from "react-icons/fa";
+import { SiN26 } from "react-icons/si";
 
 export const Sidebar = ({children}) => {
     const[isOpen ,setIsOpen] = useState(false);
@@ -14,12 +16,12 @@ export const Sidebar = ({children}) => {
         {
             path:"/",
             name:"Home",
-            icon:<FaTh/>
+            icon:<FaSolarPanel />
         },
         {
             path:"/canal26",
             name:"Canal26",
-            icon:<FaTv/>
+            icon:<SiN26 />
         },
         {
             path:"/latina",
@@ -50,6 +52,11 @@ export const Sidebar = ({children}) => {
             path:"tlc4k",
             name:"Telecentro_4k",
             icon:<PiNumberFourFill/>
+        },
+        {
+            path:"/home2",
+            name:"Home2",
+            icon:<FaTh/>
         }
     ]
     return (

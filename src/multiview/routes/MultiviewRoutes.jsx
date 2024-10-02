@@ -31,6 +31,7 @@ export const MultiviewRoutes = () => {
 
                             <Routes>
                                   <Route path="home" element={<HomePage/>} />
+                                  <Route path="home2" element={<HomePage2/>} />
                                   <Route path="canal26" element={<Canal26Page/>} />
                                   <Route path="latina" element={<LatinaPage/>} />
                                   <Route path="telemax" element={<TelemaxPage/>} />
