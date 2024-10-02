@@ -6,6 +6,18 @@ import { FaPlay } from "react-icons/fa";
 
 
 export const Navbar = () => {
+
+    //Para agregar la hora:
+    const [currentTime, setCurrentTime] = useState(new Date().toLocaleTimeString());
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrentTime(new Date().toLocaleTimeString());
+        }, 1000);
+
+        return () => clearInterval(timer); // Limpia el intervalo cuando el componente se desmonta
+    }, []);
+
     //Maneja el estado del usuario, y la salida del mismo
     const { user, logout } = useContext ( AuthContext );
     const navigate = useNavigate();
@@ -74,23 +86,25 @@ export const Navbar = () => {
                 <Link className="navbar-brand"   to="/home">
                     Multiview 3.0
                 </Link>
-
+                &nbsp;&nbsp;&nbsp;
                 <div className="navbar-collapse">
 
                     <div className="navbar-nav">
 
-                        <NavLink  className={ ({isActive}) => `nav-item nav-link ${isActive ? 'active' : ''}` }  to="/home">
-                            Home
-                        </NavLink>
+                        <div class="container-reloj">
+                            <span className="current-time">
+                                {currentTime}
+                            </span>
+                        </div>
 
                     </div>
 
                     <>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     </>
 
                     <button className="nav-item nav-link btn"  >  
-                            Logout
+                            
                     </button>
 
                         <div className="Container-audio" style={{ backgroundColor: isRed ? 'red' : 'transparent' }}>

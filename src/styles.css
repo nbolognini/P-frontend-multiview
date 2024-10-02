@@ -678,3 +678,59 @@ body {
     border-radius: 10px;
     border: 1px solid #4B4B4B;
 }
+
+
+
+.nav-item.nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem; /* Ajusta el padding según sea necesario */
+    max-width: 100%; /* Asegura que no sobrepase el tamaño del contenedor */
+    box-sizing: border-box; /* Incluye el borde y el padding en el tamaño total */
+}
+
+/* Estilos para la caja contenedora */
+.container-reloj {
+    max-width: 200px; /* Ajusta el tamaño máximo según sea necesario */
+    width: 100%; /* Asegura que ocupe el 100% del contenedor padre */
+    height: 25px; /* Ajusta la altura según sea necesario */
+    display: flex; /* Utiliza flexbox */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    overflow: hidden; /* Evita que el contenido se desborde */
+    box-sizing: border-box; /* Incluye el borde y el padding en el tamaño total */
+}
+
+/* Estilos para el reloj */
+.current-time {
+    padding: 0.5rem 0.5rem; /* Espaciado interno reducido */
+    font-size: 0.9rem; /* Tamaño de fuente más pequeño */
+    font-style: italic;  /* Texto en cursiva */
+    color: #ffffff; /* Color del texto */
+    background-color: 4B4B4B; /* Fondo gris oscuro */
+    border-radius: 0.25rem; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(49, 49, 49, 0.678); /* Sombra */
+    display: flex; /* Utiliza flexbox */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    font-family: Arial, sans-serif; /* Fuente del sistema */
+    letter-spacing: 0.05rem; /* Espaciado entre letras */
+
+    /* Bordes */
+    border-top: 15px solid #575454d5; /* Borde superior rojo */
+    border-bottom: 10px solid #575454d5; /* Borde inferior rojo */
+    border-left: 1px solid #575454d5; /* Borde izquierdo rojo */
+    border-right: 1px solid #575454d5; 
+
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
+    max-width: 100%; /* Asegura que no sobrepase el tamaño del contenedor */
+    box-sizing: border-box; /* Incluye el borde y el padding en el tamaño total */
+    overflow: hidden; /* Evita que el contenido se desborde */
+}
+
+.current-time:hover {
+    background-color: lightblue; /* Fondo gris al pasar el ratón */
+    color: #ffffff; /* Color del texto al pasar el ratón */
+}
+
