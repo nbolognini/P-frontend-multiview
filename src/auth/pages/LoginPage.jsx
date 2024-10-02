@@ -38,6 +38,7 @@ export const LoginPage = () => {
             username : username,
             password : password,
         }
+
         // ORIGINAL PARA QUE FUNCIONE EN PRODUCION: fetch('https://multiview.telecentro.net.ar:3000/validate/', {
         fetch(`${import.meta.env.VITE_API_BASE_URL}/validate/`, {
             method: 'POST',
@@ -50,15 +51,21 @@ export const LoginPage = () => {
             }
             return response.text();
         })
-        .then(data => {
-            if (data) {
-                const parsedData = JSON.parse(data);
-                onLogin();
+    .then(data => {
+        if (data) {
+            const parsedData = JSON.parse(data); // Intenta analizar el texto como JSON
+            // Verifica que la estructura de parsedData sea la esperada
+            if (parsedData.username && parsedData.role && parsedData.token) {
+                onLogin(); // Ejecuta onLogin() si la estructura es correcta
                 return parsedData;
             } else {
-                onLoginOut();
+                console.log('Estructura de respuesta incorrecta');
+                onLoginOut(); // Ejecuta onLoginOut() si la respuesta es incorrecta
             }
-        })
+            } else {
+            onLoginOut(); // Ejecuta onLoginOut() si no hay datos
+            }
+})
         .then(result => {
             console.log(result)
         })
